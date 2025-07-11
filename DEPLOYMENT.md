@@ -10,8 +10,7 @@
 
 2. **GitHub Pages 設定**
    - 前往儲存庫設定 > Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` (GitHub Actions 會自動建立)
+   - Source: GitHub Actions
    - 點擊 Save
 
 ### 自動部署流程
@@ -26,7 +25,8 @@
 2. **GitHub Actions 自動執行**
    - 安裝依賴
    - 建構靜態檔案
-   - 部署到 GitHub Pages
+   - 上傳到 GitHub Pages
+   - 自動部署
 
 3. **部署完成**
    - 網站會在 `https://[username].github.io/[repository-name]/` 上線
@@ -62,7 +62,7 @@ gh repo deploy
 
 2. **部署失敗**
    - 檢查 GitHub Actions 日誌
-   - 確認 GitHub Pages 設定正確
+   - 確認 GitHub Pages 設定為 "GitHub Actions"
    - 檢查儲存庫權限
 
 3. **圖片無法顯示**
@@ -94,11 +94,20 @@ npm run preview
 如果要使用自定義域名：
 
 1. 在 GitHub Pages 設定中添加自定義域名
-2. 在 `.github/workflows/deploy.yml` 中設定 `cname`
-3. 在 DNS 中設定 CNAME 記錄
+2. 在 DNS 中設定 CNAME 記錄
 
 ## 監控部署
 
 - 在 GitHub 儲存庫的 Actions 標籤中查看部署狀態
 - 設定 GitHub 通知以接收部署狀態
-- 使用 GitHub Pages 的狀態頁面檢查服務狀態 
+- 使用 GitHub Pages 的狀態頁面檢查服務狀態
+
+## 新的部署方式
+
+我們現在使用 GitHub 官方的 Pages 部署方式：
+
+- 使用 `actions/configure-pages@v4` 設定 Pages
+- 使用 `actions/upload-pages-artifact@v3` 上傳檔案
+- 使用 `actions/deploy-pages@v4` 部署
+
+這種方式更安全、更可靠，並且不需要手動設定 gh-pages 分支。 
