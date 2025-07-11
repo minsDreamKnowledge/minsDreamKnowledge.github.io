@@ -90,8 +90,8 @@
               </div>
               <p>初步處理感官信息，包括視覺、聽覺、觸覺等感官刺激的短暫儲存。</p>
             </div>
-            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/web/images/Sensory Memory.png', '感覺記憶圖解')">
-              <img src="/knowledge/web/images/Sensory Memory.png" alt="感覺記憶圖解" width="100%" height="100%" loading="lazy">
+            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/images/Sensory Memory.png', '感覺記憶圖解')">
+              <img src="/knowledge/images/Sensory Memory.png" alt="感覺記憶圖解" width="100%" height="100%" loading="lazy">
             </div>
           </article>
 
@@ -117,8 +117,8 @@
               </div>
               <p>暫時儲存和處理信息，遵循米勒定律的容量限制。</p>
             </div>
-            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/web/images/Short-Term Memory.png', '短期記憶容量圖')">
-              <img src="/knowledge/web/images/Short-Term Memory.png" alt="短期記憶容量圖" width="100%" height="100%" loading="lazy">
+            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/images/Short-Term Memory.png', '短期記憶容量圖')">
+              <img src="/knowledge/images/Short-Term Memory.png" alt="短期記憶容量圖" width="100%" height="100%" loading="lazy">
             </div>
           </article>
 
@@ -144,8 +144,8 @@
               </div>
               <p>永久儲存信息，包括語義記憶和情節記憶兩大類。</p>
             </div>
-            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/web/images/Long-Term Memory.png', '長期記憶網絡圖')">
-              <img src="/knowledge/web/images/Long-Term Memory.png" alt="長期記憶網絡圖" width="100%" height="100%" loading="lazy">
+            <div class="card-image-placeholder" @click="showImagePopup('/knowledge/images/Long-Term Memory.png', '長期記憶網絡圖')">
+              <img src="/knowledge/images/Long-Term Memory.png" alt="長期記憶網絡圖" width="100%" height="100%" loading="lazy">
             </div>
           </article>
         </div>
@@ -184,8 +184,8 @@
               </div>
               <p>將外部信息轉換為大腦可以處理和儲存的形式。</p>
             </div>
-            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/web/images/Encoding Process.png', '編碼過程圖解')">
-              <img src="/knowledge/web/images/Encoding Process.png" alt="編碼過程圖解" width="100%" height="100%" loading="lazy">
+            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/images/Encoding Process.png', '編碼過程圖解')">
+              <img src="/knowledge/images/Encoding Process.png" alt="編碼過程圖解" width="100%" height="100%" loading="lazy">
             </div>
           </article>
 
@@ -209,8 +209,8 @@
               </div>
               <p>將信息從短期記憶轉換為長期記憶，建立記憶網絡。</p>
             </div>
-            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/web/images/Memory Storage.png', '記憶儲存網絡圖')">
-              <img src="/knowledge/web/images/Memory Storage.png" alt="記憶儲存網絡圖" width="100%" height="100%" loading="lazy">
+            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/images/Memory Storage.png', '記憶儲存網絡圖')">
+              <img src="/knowledge/images/Memory Storage.png" alt="記憶儲存網絡圖" width="100%" height="100%" loading="lazy">
             </div>
           </article>
 
@@ -234,8 +234,8 @@
               </div>
               <p>從記憶中檢索和重建信息的不同方式。</p>
             </div>
-            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/web/images/Memory Retrieval.png', '記憶提取模式圖')">
-              <img src="/knowledge/web/images/Memory Retrieval.png" alt="記憶提取模式圖" width="100%" height="100%" loading="lazy">
+            <div class="step-image-placeholder" @click="showImagePopup('/knowledge/images/Memory Retrieval.png', '記憶提取模式圖')">
+              <img src="/knowledge/images/Memory Retrieval.png" alt="記憶提取模式圖" width="100%" height="100%" loading="lazy">
             </div>
           </article>
         </div>
@@ -255,7 +255,7 @@
         <div class="brain-anatomy" role="list">
           <article class="brain-row" data-aos="fade-up" role="listitem">
             <div class="brain-model">
-              <img src="/knowledge/web/images/Hippocampus.png" alt="海馬體" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/web/images/Hippocampus.png', '海馬體')">
+              <img src="/knowledge/images/Hippocampus.png" alt="海馬體" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/images/Hippocampus.png', '海馬體')">
             </div>
             <div class="info-card">
               <div class="info-icon">
@@ -271,7 +271,7 @@
           </article>
           <article class="brain-row" data-aos="fade-up" data-aos-delay="100" role="listitem">
             <div class="brain-model">
-              <img src="/knowledge/web/images/Memory Manager.png" alt="大腦皮質" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/web/images/Memory Manager.png', '大腦皮質')">
+              <img src="/knowledge/images/Memory Manager.png" alt="大腦皮質" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/images/Memory Manager.png', '大腦皮質')">
             </div>
             <div class="info-card">
               <div class="info-icon">
@@ -287,7 +287,7 @@
           </article>
           <article class="brain-row" data-aos="fade-up" data-aos-delay="200" role="listitem">
             <div class="brain-model">
-              <img src="/knowledge/web/images/Emotional Amygdala.png" alt="杏仁核" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/web/images/Emotional Amygdala.png', '杏仁核')">
+              <img src="/knowledge/images/Emotional Amygdala.png" alt="杏仁核" class="neural-img" width="100%" height="100%" loading="lazy" @click="showImagePopup('/knowledge/images/Emotional Amygdala.png', '杏仁核')">
             </div>
             <div class="info-card">
               <div class="info-icon">
@@ -330,8 +330,8 @@
                 <h4>巴甫洛夫實驗</h4>
                 <p>狗和鈴聲的條件反射實驗，展示中性刺激與無條件刺激的配對學習。</p>
               </div>
-              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/web/images/pavlov.png', '巴甫洛夫實驗圖解')">
-                <img src="/knowledge/web/images/pavlov.png" alt="巴甫洛夫實驗圖解" width="100%" height="100%" loading="lazy">
+              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/images/pavlov.png', '巴甫洛夫實驗圖解')">
+                <img src="/knowledge/images/pavlov.png" alt="巴甫洛夫實驗圖解" width="100%" height="100%" loading="lazy">
               </div>
             </div>
           </article>
@@ -349,8 +349,8 @@
                 <h4>斯金納箱實驗</h4>
                 <p>老鼠和槓桿的實驗，展示行為與後果的關聯學習機制。</p>
               </div>
-              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/web/images/skinner.png', '斯金納箱實驗圖解')">
-                <img src="/knowledge/web/images/skinner.png" alt="斯金納箱實驗圖解" width="100%" height="100%" loading="lazy">
+              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/images/skinner.png', '斯金納箱實驗圖解')">
+                <img src="/knowledge/images/skinner.png" alt="斯金納箱實驗圖解" width="100%" height="100%" loading="lazy">
               </div>
             </div>
           </article>
@@ -368,8 +368,8 @@
                 <h4>班杜拉實驗</h4>
                 <p>波波娃娃實驗，展示通過觀察他人行為進行學習的機制。</p>
               </div>
-              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/web/images/bandura.png', '班杜拉實驗圖解')">
-                <img src="/knowledge/web/images/bandura.png" alt="班杜拉實驗圖解" width="100%" height="100%" loading="lazy">
+              <div class="mechanism-image-placeholder" @click="showImagePopup('/knowledge/images/bandura.png', '班杜拉實驗圖解')">
+                <img src="/knowledge/images/bandura.png" alt="班杜拉實驗圖解" width="100%" height="100%" loading="lazy">
               </div>
             </div>
           </article>

@@ -63,7 +63,7 @@ nuxt-app/
 ├── assets/          # 靜態資源
 │   └── styles.css   # 樣式檔案
 ├── public/          # 公開檔案
-│   └── knowledge/web/images/ # 圖片檔案
+│   └── knowledge/images/ # 圖片檔案
 └── .github/workflows/ # CI/CD 配置
     └── deploy.yml   # 部署工作流程
 ```
