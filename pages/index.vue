@@ -2,9 +2,14 @@
   <div class="container">
     <h1>歡迎來到知識系統</h1>
     <p>這是一個關於記憶系統與學習機制的知識網站。</p>
-    <NuxtLink to="/knowledge" class="btn btn-primary">
-      進入知識頁面
-    </NuxtLink>
+    <div class="button-group">
+      <NuxtLink to="/knowledge" class="btn btn-primary">
+        進入知識頁面
+      </NuxtLink>
+      <NuxtLink to="/bangkok" class="btn btn-secondary">
+        🇹🇭 曼谷旅遊規劃
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -42,5 +47,23 @@ p {
 
 .btn:hover {
   background: #2980b9;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #2c3e50;
+  border: 2px solid #3498db;
+}
+
+.btn-secondary:hover {
+  background: #3498db;
+  color: white;
 }
 </style> 
