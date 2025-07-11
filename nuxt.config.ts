@@ -9,8 +9,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap' }
       ]
     },
-    baseURL: process.env.NODE_ENV === 'production' ? '/nuxt-app/' : '/',
-    buildAssetsDir: '/nuxt-app/_nuxt/'
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/'
   },
   ssr: false,
   nitro: {
