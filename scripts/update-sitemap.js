@@ -70,4 +70,7 @@ function main() {
 }
 
 // 執行主函數
-main(); 
+main();
+
+// 導出函數供其他腳本使用
+export { getDeploymentURL, updateFile }; 

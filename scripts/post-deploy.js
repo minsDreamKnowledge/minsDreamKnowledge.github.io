@@ -68,6 +68,11 @@ function validateSitemapDomain() {
       return false;
     }
     
+    // 檢查是否包含 GitHub Pages 格式的 URL
+    if (!content.includes('github.io')) {
+      console.log('⚠️  sitemap.xml may not contain GitHub Pages URL format');
+    }
+    
     console.log('✅ sitemap.xml domain validation passed');
     return true;
   } catch (error) {
@@ -92,6 +97,11 @@ function validateRobotsDomain() {
     if (content.includes('https://your-domain.com')) {
       console.log('❌ robots.txt still contains default domain');
       return false;
+    }
+    
+    // 檢查是否包含 GitHub Pages 格式的 URL
+    if (!content.includes('github.io')) {
+      console.log('⚠️  robots.txt may not contain GitHub Pages URL format');
     }
     
     console.log('✅ robots.txt domain validation passed');
