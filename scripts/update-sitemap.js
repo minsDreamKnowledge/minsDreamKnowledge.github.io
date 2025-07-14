@@ -13,6 +13,13 @@ function getDeploymentURL() {
   
   if (GITHUB_EVENT_NAME === 'push' && GITHUB_REPOSITORY) {
     const repoName = GITHUB_REPOSITORY.split('/')[1];
+    
+    // 如果是 username.github.io 格式的倉庫，直接使用 username.github.io
+    if (repoName.endsWith('.github.io')) {
+      return `https://${GITHUB_REPOSITORY_OWNER}.github.io`;
+    }
+    
+    // 其他倉庫使用 username.github.io/repository-name 格式
     return `https://${GITHUB_REPOSITORY_OWNER}.github.io/${repoName}`;
   }
   
