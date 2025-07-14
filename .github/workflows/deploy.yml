@@ -17,6 +17,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# 環境變數
+env:
+  NODE_VERSION: '20.11.1'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -28,14 +32,20 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20.11.1'
+        node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
         
     - name: Install dependencies
       run: npm ci
       
+    - name: Pre-deployment checks
+      run: npm run pre-deploy
+      
     - name: Build application
       run: npm run build:static
+      
+    - name: Update sitemap and robots files
+      run: npm run update-sitemap
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -47,4 +57,7 @@ jobs:
         
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v4 
+      uses: actions/deploy-pages@v4
+      
+    - name: Post-deployment validation
+      run: npm run post-deploy 

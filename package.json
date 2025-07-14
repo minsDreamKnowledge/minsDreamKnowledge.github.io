@@ -9,7 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "build:static": "nuxt generate",
-    "deploy": "npm run build:static"
+    "deploy": "npm run build:static",
+    "update-sitemap": "node scripts/update-sitemap.js",
+    "pre-deploy": "node scripts/pre-deploy.js",
+    "post-deploy": "node scripts/post-deploy.js"
   },
   "dependencies": {
     "nuxt": "^3.17.6",
