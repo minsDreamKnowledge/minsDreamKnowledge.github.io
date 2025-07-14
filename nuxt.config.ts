@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      meta: [
+        { name: 'google-site-verification', content: 'U7x9cSCfgcjUN9brcEBtzO73WqYcKt6troHvTioCpEc' }
+      ],
       link: [
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap' },
