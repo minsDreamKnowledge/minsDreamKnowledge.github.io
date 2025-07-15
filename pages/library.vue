@@ -3,7 +3,7 @@
     <h1>歡迎來到知識系統</h1>
     <p>這是一個關於記憶系統與學習機制的知識網站。</p>
     <div class="button-group">
-      <NuxtLink to="/knowledge" class="btn btn-primary">
+      <NuxtLink to="/" class="btn btn-primary">
         進入知識頁面
       </NuxtLink>
       <NuxtLink to="/bangkok" class="btn btn-secondary">

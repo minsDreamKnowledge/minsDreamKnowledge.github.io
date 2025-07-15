@@ -42,7 +42,7 @@
           <h2>沒有找到相關結果</h2>
           <p>嘗試使用不同的關鍵字或瀏覽以下建議內容：</p>
           <div class="suggestions">
-            <NuxtLink to="/knowledge" class="suggestion-link">
+            <NuxtLink to="/" class="suggestion-link">
               <span class="suggestion-icon">📚</span>
               知識庫
             </NuxtLink>
@@ -104,7 +104,7 @@
               <div class="suggestion-card-icon">🧠</div>
               <h3>大腦科學</h3>
               <p>探索大腦基礎結構與功能</p>
-              <NuxtLink to="/knowledge#brain-structure" class="suggestion-link">
+              <NuxtLink to="/#brain-structure" class="suggestion-link">
                 了解更多
               </NuxtLink>
             </div>
@@ -112,7 +112,7 @@
               <div class="suggestion-card-icon">💭</div>
               <h3>記憶系統</h3>
               <p>了解記憶系統與學習機制</p>
-              <NuxtLink to="/knowledge#memory-system" class="suggestion-link">
+              <NuxtLink to="/#memory-system" class="suggestion-link">
                 了解更多
               </NuxtLink>
             </div>
@@ -145,7 +145,7 @@ const searchDatabase = [
     id: 'home',
     title: '首頁',
     description: '歡迎來到知識系統，提供記憶系統與學習機制的完整知識體系',
-    path: '/',
+    path: '/library',
     icon: '🏠',
     category: '主要頁面'
   },
@@ -153,7 +153,7 @@ const searchDatabase = [
     id: 'knowledge',
     title: '知識庫',
     description: '記憶系統與學習機制的完整知識體系，包含大腦科學、認知研究等內容',
-    path: '/knowledge',
+    path: '/',
     icon: '📚',
     category: '教育知識'
   },
@@ -177,7 +177,7 @@ const searchDatabase = [
     id: 'brain-structure',
     title: '大腦基礎結構',
     description: '大腦基礎結構與功能解析，了解大腦運作原理',
-    path: '/knowledge#brain-structure',
+    path: '/#brain-structure',
     icon: '🧠',
     category: '大腦科學'
   },
@@ -185,7 +185,7 @@ const searchDatabase = [
     id: 'memory-system',
     title: '記憶系統',
     description: '記憶系統與學習機制詳解，提升學習效率',
-    path: '/knowledge#memory-system',
+    path: '/#memory-system',
     icon: '💭',
     category: '學習機制'
   },
