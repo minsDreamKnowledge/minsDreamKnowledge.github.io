@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
+        { name: 'robots', content: 'index, follow' },
+        { name: 'googlebot', content: 'index, follow' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Mins Dream Knowledge' }
       ],
       link: [
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' },
@@ -19,7 +23,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
         { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/android-chrome-512x512.png' },
         { rel: 'mask-icon', color: '#5bbad5', href: '/safari-pinned-tab.svg' },
-        { rel: 'msapplication-TileImage', content: '/mstile-150x150.png' }
+        { rel: 'msapplication-TileImage', type: 'image/png', sizes: '150x150', href: '/mstile-150x150.png' }
       ],
       script: [
         { src: 'https://unpkg.com/aos@2.3.4/dist/aos.js' }
