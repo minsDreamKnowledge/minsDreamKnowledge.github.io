@@ -33,18 +33,37 @@ npm run preview
 ### 自動部署 (GitHub Pages)
 
 1. 推送程式碼到 `main` 分支
-2. GitHub Actions 會自動建構並部署到 GitHub Pages
+2. GitHub Actions 會自動：
+   - 生成最新的 sitemap.xml
+   - 執行部署前檢查
+   - 建構並部署到 GitHub Pages
 3. 網站會發布在：`https://[username].github.io/[repository-name]/`
 
 ### 手動部署
 
 ```bash
+# 生成 sitemap.xml
+npm run generate-sitemap
+
+# 部署前檢查（包含 sitemap 生成）
+npm run pre-deploy
+
 # 建構靜態檔案
 npm run build:static
 
 # 部署到 GitHub Pages
 npm run deploy
 ```
+
+### SEO 優化
+
+本專案已內建 SEO 優化功能：
+- 🗺️ **自動 sitemap 生成** - 掃描所有頁面並生成 sitemap.xml
+- 🤖 **robots.txt** - 搜索引擎索引指引
+- 📊 **Google Search Console** - 提交 sitemap 到 Google
+- 🔍 **Meta 標籤** - 完整的 SEO meta 標籤
+
+詳細信息請參閱 [SITEMAP_GENERATION.md](./SITEMAP_GENERATION.md)
 
 ## 技術棧
 

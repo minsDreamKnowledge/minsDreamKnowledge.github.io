@@ -10,8 +10,9 @@
     "postinstall": "nuxt prepare",
     "build:static": "nuxt generate",
     "deploy": "npm run build:static",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
     "update-sitemap": "node scripts/update-sitemap.js",
-    "pre-deploy": "node scripts/pre-deploy.js",
+    "pre-deploy": "npm run generate-sitemap && node scripts/pre-deploy.js",
     "post-deploy": "node scripts/post-deploy.js",
     "test-deployment": "node scripts/test-deployment.js"
   },

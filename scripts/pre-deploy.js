@@ -46,7 +46,36 @@ function validateSitemap() {
     console.log('❌ sitemap.xml not found');
     return false;
   }
-  return true;
+  
+  try {
+    const content = fs.readFileSync(sitemapPath, 'utf8');
+    
+    // 檢查是否是有效的 XML 格式
+    if (!content.includes('<?xml version="1.0" encoding="UTF-8"?>')) {
+      console.log('❌ sitemap.xml missing XML declaration');
+      return false;
+    }
+    
+    // 檢查是否包含 urlset 標籤
+    if (!content.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')) {
+      console.log('❌ sitemap.xml missing urlset declaration');
+      return false;
+    }
+    
+    // 檢查是否包含 URL 項目
+    if (!content.includes('<url>')) {
+      console.log('❌ sitemap.xml contains no URLs');
+      return false;
+    }
+    
+    // 計算 URL 數量
+    const urlCount = (content.match(/<url>/g) || []).length;
+    console.log(`✅ sitemap.xml is valid (${urlCount} URLs found)`);
+    return true;
+  } catch (error) {
+    console.log(`❌ Error reading sitemap.xml: ${error.message}`);
+    return false;
+  }
 }
 
 // 檢查 robots.txt 格式

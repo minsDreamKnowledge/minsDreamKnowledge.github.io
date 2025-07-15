@@ -38,10 +38,10 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Pre-deployment checks
+    - name: Pre-deployment checks and sitemap generation
       run: npm run pre-deploy
       
-    - name: Update sitemap and robots files
+    - name: Update domain in sitemap and robots files
       run: npm run update-sitemap
       
     - name: Build application
