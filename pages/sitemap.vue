@@ -25,13 +25,13 @@
               <div class="page-icon">🏠</div>
               <h3>首頁</h3>
               <p>歡迎頁面，提供網站概覽和主要導航</p>
-              <NuxtLink to="/" class="page-link">訪問頁面</NuxtLink>
+              <NuxtLink to="/library" class="page-link">訪問頁面</NuxtLink>
             </div>
             <div class="page-card" data-aos="fade-up" data-aos-delay="100">
               <div class="page-icon">📚</div>
               <h3>知識庫</h3>
               <p>記憶系統與學習機制的完整知識體系</p>
-              <NuxtLink to="/knowledge" class="page-link">訪問頁面</NuxtLink>
+              <NuxtLink to="/" class="page-link">訪問頁面</NuxtLink>
             </div>
             <div class="page-card" data-aos="fade-up" data-aos-delay="200">
               <div class="page-icon">🇹🇭</div>

@@ -14,13 +14,13 @@
         <div class="nav-menu" :class="{ 'nav-open': isMenuOpen }">
           <ul class="nav-list">
             <li class="nav-item">
-              <NuxtLink to="/" class="nav-link" @click="closeMenu">
+              <NuxtLink to="/library" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">🏠</span>
                 首頁
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/knowledge" class="nav-link" @click="closeMenu">
+              <NuxtLink to="/" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">📚</span>
                 知識庫
               </NuxtLink>
@@ -106,14 +106,14 @@ const searchData = [
     id: 'home',
     title: '首頁',
     description: '歡迎來到知識系統',
-    path: '/',
+    path: '/library',
     icon: '🏠'
   },
   {
     id: 'knowledge',
     title: '知識庫',
     description: '記憶系統與學習機制',
-    path: '/knowledge',
+    path: '/',
     icon: '📚'
   },
   {
@@ -127,14 +127,14 @@ const searchData = [
     id: 'brain-structure',
     title: '大腦基礎結構',
     description: '大腦基礎結構與功能',
-    path: '/knowledge#brain-structure',
+    path: '/#brain-structure',
     icon: '🧠'
   },
   {
     id: 'memory-system',
     title: '記憶系統',
     description: '記憶系統與學習機制',
-    path: '/knowledge#memory-system',
+    path: '/#memory-system',
     icon: '💭'
   },
   {

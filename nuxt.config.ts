@@ -32,10 +32,10 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: '/_nuxt/'
   },
-  ssr: false,
+  // ssr: false,
   nitro: {
     prerender: {
-      routes: ['/knowledge']
+      routes: ['/']
     }
   }
 })
