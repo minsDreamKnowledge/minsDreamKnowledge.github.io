@@ -1,9 +1,7 @@
-User-Agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://minsDreamKnowledge.github.io/sitemap.xml
-
+User-agent: *
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
 # Disallow: /private/
+# Sitemap
+
+sitemap: https://minsDreamKnowledge.github.io/sitemap.xml
