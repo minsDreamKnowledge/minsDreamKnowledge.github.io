@@ -4,11 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      title: 'Mins Dream Knowledge',
       meta: [
-        { name: 'robots', content: 'index, follow' },
-        { name: 'googlebot', content: 'index, follow' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Mins Dream Knowledge' }
+        { name: 'description', content: '探索記憶系統與學習機制、心理學發展歷程、歷史文化、旅遊規劃等多元知識領域。提供深度學習資源，從大腦科學到人文歷史，幫助您建立完整的知識體系。' }
       ],
       link: [
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' },

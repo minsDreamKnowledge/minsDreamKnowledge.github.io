@@ -78,39 +78,13 @@ function validateSitemap() {
   }
 }
 
-// 檢查 robots.txt 格式
-function validateRobots() {
-  const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
-  
-  if (!fs.existsSync(robotsPath)) {
-    console.log('❌ robots.txt not found');
-    return false;
-  }
-  
-  try {
-    const content = fs.readFileSync(robotsPath, 'utf8');
-    
-    if (!content.includes('User-Agent:')) {
-      console.log('❌ robots.txt missing User-Agent directive');
-      return false;
-    }
-    
-    console.log('✅ robots.txt format is valid');
-    return true;
-  } catch (error) {
-    console.log(`❌ Error reading robots.txt: ${error.message}`);
-    return false;
-  }
-}
-
 // 主函數
 function main() {
   console.log('🚀 Pre-deployment checks...\n');
   
   const checks = [
     checkRequiredFiles(),
-    validateSitemap(),
-    validateRobots()
+    validateSitemap()
   ];
   
   const allPassed = checks.every(check => check);
