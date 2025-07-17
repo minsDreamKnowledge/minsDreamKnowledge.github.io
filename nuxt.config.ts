@@ -24,7 +24,17 @@ export default defineNuxtConfig({
         { rel: 'msapplication-TileImage', type: 'image/png', sizes: '150x150', href: '/mstile-150x150.png' }
       ],
       script: [
-        { src: 'https://unpkg.com/aos@2.3.4/dist/aos.js' }
+        { src: 'https://unpkg.com/aos@2.3.4/dist/aos.js' },
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-GKV4J3GE34', async: true },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GKV4J3GE34');
+          `,
+          type: 'text/javascript'
+        }
       ]
     },
     baseURL: '/',
