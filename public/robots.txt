@@ -1,7 +1,16 @@
-User-agent: *
+User-Agent: *
+Allow: /
+
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
 # Disallow: /private/
-# Sitemap
 
-sitemap: https://minsDreamKnowledge.github.io/sitemap.xml
+# 允許 Google AdSense 和 Analytics
+User-Agent: Mediapartners-Google
+Allow: /
+
+User-Agent: Googlebot
+Allow: /
+
+# Sitemap
+Sitemap: https://minsDreamKnowledge.github.io/sitemap.xml
