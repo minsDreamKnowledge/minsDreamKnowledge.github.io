@@ -10,8 +10,8 @@ const __dirname = path.dirname(__filename);
 // 檢查必要文件
 function checkRequiredFiles() {
   const publicDir = path.join(__dirname, '..', 'public');
+  const serverDir = path.join(__dirname, '..', 'server');
   const requiredFiles = [
-    'sitemap.xml',
     'robots.txt',
     'favicon.ico'
   ];
@@ -20,6 +20,7 @@ function checkRequiredFiles() {
   
   const missingFiles = [];
   
+  // 檢查 public 目錄中的文件
   requiredFiles.forEach(file => {
     const filePath = path.join(publicDir, file);
     if (fs.existsSync(filePath)) {
@@ -30,6 +31,15 @@ function checkRequiredFiles() {
     }
   });
   
+  // 檢查 sitemap API 文件
+  const sitemapApiPath = path.join(serverDir, 'api', 'sitemap.xml.ts');
+  if (fs.existsSync(sitemapApiPath)) {
+    console.log('✅ sitemap.xml.ts API exists');
+  } else {
+    console.log('❌ sitemap.xml.ts API missing');
+    missingFiles.push('sitemap.xml.ts API');
+  }
+  
   if (missingFiles.length > 0) {
     console.log(`⚠️  Missing files: ${missingFiles.join(', ')}`);
     return false;
@@ -38,42 +48,70 @@ function checkRequiredFiles() {
   return true;
 }
 
-// 檢查 sitemap.xml 格式
-function validateSitemap() {
-  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+// 檢查 Nuxt 配置
+function validateNuxtConfig() {
+  const configPath = path.join(__dirname, '..', 'nuxt.config.ts');
   
-  if (!fs.existsSync(sitemapPath)) {
-    console.log('❌ sitemap.xml not found');
+  if (!fs.existsSync(configPath)) {
+    console.log('❌ nuxt.config.ts not found');
     return false;
   }
   
   try {
-    const content = fs.readFileSync(sitemapPath, 'utf8');
+    const content = fs.readFileSync(configPath, 'utf8');
     
-    // 檢查是否是有效的 XML 格式
-    if (!content.includes('<?xml version="1.0" encoding="UTF-8"?>')) {
-      console.log('❌ sitemap.xml missing XML declaration');
+    // 檢查是否包含 sitemap 模組
+    if (!content.includes('@nuxtjs/sitemap')) {
+      console.log('❌ @nuxtjs/sitemap module not found in nuxt.config.ts');
       return false;
     }
     
-    // 檢查是否包含 urlset 標籤
-    if (!content.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')) {
-      console.log('❌ sitemap.xml missing urlset declaration');
+    // 檢查是否包含 siteUrl 配置
+    if (!content.includes('siteUrl')) {
+      console.log('❌ siteUrl not configured in nuxt.config.ts');
       return false;
     }
     
-    // 檢查是否包含 URL 項目
-    if (!content.includes('<url>')) {
-      console.log('❌ sitemap.xml contains no URLs');
-      return false;
-    }
-    
-    // 計算 URL 數量
-    const urlCount = (content.match(/<url>/g) || []).length;
-    console.log(`✅ sitemap.xml is valid (${urlCount} URLs found)`);
+    console.log('✅ nuxt.config.ts is properly configured');
     return true;
   } catch (error) {
-    console.log(`❌ Error reading sitemap.xml: ${error.message}`);
+    console.log(`❌ Error reading nuxt.config.ts: ${error.message}`);
+    return false;
+  }
+}
+
+// 檢查 package.json 依賴
+function validateDependencies() {
+  const packagePath = path.join(__dirname, '..', 'package.json');
+  
+  if (!fs.existsSync(packagePath)) {
+    console.log('❌ package.json not found');
+    return false;
+  }
+  
+  try {
+    const content = fs.readFileSync(packagePath, 'utf8');
+    const packageJson = JSON.parse(content);
+    
+    // 檢查必要的依賴
+    const requiredDeps = ['@nuxtjs/sitemap', 'sitemap'];
+    const missingDeps = [];
+    
+    requiredDeps.forEach(dep => {
+      if (!packageJson.dependencies[dep]) {
+        missingDeps.push(dep);
+      }
+    });
+    
+    if (missingDeps.length > 0) {
+      console.log(`❌ Missing dependencies: ${missingDeps.join(', ')}`);
+      return false;
+    }
+    
+    console.log('✅ All required dependencies are installed');
+    return true;
+  } catch (error) {
+    console.log(`❌ Error reading package.json: ${error.message}`);
     return false;
   }
 }
@@ -84,7 +122,8 @@ function main() {
   
   const checks = [
     checkRequiredFiles(),
-    validateSitemap()
+    validateNuxtConfig(),
+    validateDependencies()
   ];
   
   const allPassed = checks.every(check => check);
@@ -92,6 +131,7 @@ function main() {
   console.log('\n📊 Check Summary:');
   if (allPassed) {
     console.log('✅ All checks passed! Ready for deployment.');
+    console.log('📝 Note: Sitemap will be generated automatically during build process.');
     process.exit(0);
   } else {
     console.log('❌ Some checks failed. Please fix issues before deployment.');

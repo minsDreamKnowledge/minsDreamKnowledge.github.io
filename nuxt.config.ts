@@ -2,6 +2,19 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+  
+  // 添加 sitemap 模組
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
+  
+  // Sitemap 配置
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://minsdreamknowledge.github.io'
+    }
+  },
+  
   app: {
     head: {
       title: 'Mins Dream Knowledge',
