@@ -20,6 +20,6 @@
     "vue-router": "^4.5.1",
     "aos": "^2.3.4",
     "@nuxtjs/sitemap": "^7.4.3",
-    "sitemap": "^7.1.1"
+    "sitemap": "^8.0.0"
   }
 }
