@@ -19,7 +19,7 @@ concurrency:
 
 # 環境變數
 env:
-  NODE_VERSION: '20.11.1'
+  NODE_VERSION: '20.18.0'
 
 jobs:
   build-and-deploy:
@@ -36,7 +36,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm install
       
     - name: Pre-deployment checks
       run: npm run pre-deploy
