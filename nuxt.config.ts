@@ -13,6 +13,14 @@ export default defineNuxtConfig({
     url: 'https://minsdreamknowledge.github.io',
     name: 'Mins Dream Knowledge'
   },
+  sitemap: {
+    xsl: false,
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
+  },
   
   app: {
     head: {

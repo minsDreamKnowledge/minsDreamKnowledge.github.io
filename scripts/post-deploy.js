@@ -93,11 +93,6 @@ function validateNuxtConfig() {
   try {
     const content = fs.readFileSync(configPath, 'utf8');
     
-    // 檢查是否包含正確的 site 配置
-    if (!content.includes('minsdreamknowledge.github.io')) {
-      console.log('⚠️  nuxt.config.ts may not contain correct GitHub Pages URL');
-    }
-    
     // 檢查是否包含 sitemap 模組
     if (!content.includes('@nuxtjs/sitemap')) {
       console.log('❌ @nuxtjs/sitemap module not found in nuxt.config.ts');
