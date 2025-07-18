@@ -9,10 +9,9 @@ export default defineNuxtConfig({
   ],
   
   // Sitemap 配置
-  runtimeConfig: {
-    public: {
-      siteUrl: 'https://minsdreamknowledge.github.io'
-    }
+  site: {
+    url: 'https://minsdreamknowledge.github.io',
+    name: 'Mins Dream Knowledge'
   },
   
   app: {

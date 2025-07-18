@@ -10,7 +10,6 @@ const __dirname = path.dirname(__filename);
 // 檢查必要文件
 function checkRequiredFiles() {
   const publicDir = path.join(__dirname, '..', 'public');
-  const serverDir = path.join(__dirname, '..', 'server');
   const requiredFiles = [
     'robots.txt',
     'favicon.ico'
@@ -30,15 +29,6 @@ function checkRequiredFiles() {
       missingFiles.push(file);
     }
   });
-  
-  // 檢查 sitemap API 文件
-  const sitemapApiPath = path.join(serverDir, 'api', 'sitemap.xml.ts');
-  if (fs.existsSync(sitemapApiPath)) {
-    console.log('✅ sitemap.xml.ts API exists');
-  } else {
-    console.log('❌ sitemap.xml.ts API missing');
-    missingFiles.push('sitemap.xml.ts API');
-  }
   
   if (missingFiles.length > 0) {
     console.log(`⚠️  Missing files: ${missingFiles.join(', ')}`);
@@ -66,9 +56,15 @@ function validateNuxtConfig() {
       return false;
     }
     
-    // 檢查是否包含 siteUrl 配置
-    if (!content.includes('siteUrl')) {
-      console.log('❌ siteUrl not configured in nuxt.config.ts');
+    // 檢查是否包含 site 配置
+    if (!content.includes('site:')) {
+      console.log('❌ site configuration not found in nuxt.config.ts');
+      return false;
+    }
+    
+    // 檢查是否包含正確的 URL
+    if (!content.includes('minsdreamknowledge.github.io')) {
+      console.log('❌ GitHub Pages URL not configured in nuxt.config.ts');
       return false;
     }
     
@@ -94,7 +90,7 @@ function validateDependencies() {
     const packageJson = JSON.parse(content);
     
     // 檢查必要的依賴
-    const requiredDeps = ['@nuxtjs/sitemap', 'sitemap'];
+    const requiredDeps = ['@nuxtjs/sitemap'];
     const missingDeps = [];
     
     requiredDeps.forEach(dep => {
@@ -131,7 +127,7 @@ function main() {
   console.log('\n📊 Check Summary:');
   if (allPassed) {
     console.log('✅ All checks passed! Ready for deployment.');
-    console.log('📝 Note: Sitemap will be generated automatically during build process.');
+    console.log('📝 Note: Sitemap will be generated automatically by @nuxtjs/sitemap module.');
     process.exit(0);
   } else {
     console.log('❌ Some checks failed. Please fix issues before deployment.');
