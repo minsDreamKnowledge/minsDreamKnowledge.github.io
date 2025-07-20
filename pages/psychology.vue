@@ -295,7 +295,8 @@ const experiments = [
     researcher: '伊凡·巴夫洛夫',
     description: '狗與鈴聲實驗，建立古典制約理論',
     finding: '中性刺激與無條件刺激配對可產生制約反應',
-    icon: 'fas fa-bell'
+    icon: 'fas fa-bell',
+    // path: '/experiment/classical-conditioning'
   },
   {
     name: '史金納箱實驗',
@@ -303,7 +304,8 @@ const experiments = [
     researcher: 'B.F.史金納',
     description: '操作制約實驗，研究行為後果對行為的影響',
     finding: '正增強可增加行為頻率，負增強可減少行為',
-    icon: 'fas fa-box'
+    icon: 'fas fa-box',
+    path: '/experiment/skinner-box'
   },
   {
     name: '米爾格蘭姆服從實驗',
@@ -319,7 +321,7 @@ const experiments = [
     researcher: '菲利普·津巴多',
     description: '模擬監獄環境，研究角色對行為的影響',
     finding: '環境和角色可顯著影響人的行為和態度',
-    icon: 'fas fa-jail'
+    icon: 'fas fa-user-secret'
   },
   {
     name: '艾賓浩斯遺忘曲線',
@@ -856,7 +858,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--color-text);
   font-size: 1.2rem;
 }
 

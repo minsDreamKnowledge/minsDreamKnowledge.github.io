@@ -40,13 +40,19 @@
             <li>
               <NuxtLink to="/" class="footer-link">
                 <span class="link-icon">📚</span>
-                知識庫
+                記憶系統
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/bangkok" class="footer-link">
-                <span class="link-icon">🇹🇭</span>
-                曼谷旅遊
+              <NuxtLink to="/travel" class="footer-link">
+                <span class="link-icon">🌍</span>
+                旅遊指南
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/psychology" class="footer-link">
+                <span class="link-icon">🧠</span>
+                心理學
               </NuxtLink>
             </li>
             <li>
@@ -75,13 +81,13 @@
               </a>
             </li>
             <li>
-              <a href="/bangkok#attractions" class="footer-link">
+              <a href="/travel/bangkok#attractions" class="footer-link">
                 <span class="link-icon">🗺️</span>
                 旅遊景點
               </a>
             </li>
             <li>
-              <a href="/bangkok#food" class="footer-link">
+              <a href="/travel/bangkok#food" class="footer-link">
                 <span class="link-icon">🍜</span>
                 美食文化
               </a>

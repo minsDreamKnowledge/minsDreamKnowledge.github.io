@@ -22,19 +22,19 @@
             <li class="nav-item">
               <NuxtLink to="/" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">📚</span>
-                知識庫
+                記憶系統
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/bangkok" class="nav-link" @click="closeMenu">
-                <span class="nav-icon">🇹🇭</span>
-                曼谷旅遊
+              <NuxtLink to="/psychology" class="nav-link" @click="closeMenu">
+                <span class="nav-icon">🧠</span>
+                心理學
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/sitemap" class="nav-link" @click="closeMenu">
-                <span class="nav-icon">🗺️</span>
-                網站地圖
+              <NuxtLink to="/travel" class="nav-link" @click="closeMenu">
+                <span class="nav-icon">🌍</span>
+                旅遊指南
               </NuxtLink>
             </li>
             <li class="nav-item">
@@ -120,7 +120,7 @@ const searchData = [
     id: 'bangkok',
     title: '曼谷旅遊規劃',
     description: '泰國曼谷旅遊完整指南',
-    path: '/bangkok',
+    path: '/travel/bangkok',
     icon: '🇹🇭'
   },
   {
@@ -141,21 +141,21 @@ const searchData = [
     id: 'preparation',
     title: '前置準備',
     description: '曼谷旅遊前置準備事項',
-    path: '/bangkok#preparation',
+    path: '/travel/bangkok#preparation',
     icon: '📋'
   },
   {
     id: 'attractions',
     title: '必訪景點',
     description: '曼谷必訪景點推薦',
-    path: '/bangkok#attractions',
+    path: '/travel/bangkok#attractions',
     icon: '🗺️'
   },
   {
     id: 'food-culture',
     title: '美食文化',
     description: '泰國美食與文化特色',
-    path: '/bangkok#food',
+    path: '/travel/bangkok#food',
     icon: '🍜'
   }
 ]
