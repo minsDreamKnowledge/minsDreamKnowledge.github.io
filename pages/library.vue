@@ -6,7 +6,7 @@
       <NuxtLink to="/" class="btn btn-primary">
         進入知識頁面
       </NuxtLink>
-      <NuxtLink to="/bangkok" class="btn btn-secondary">
+      <NuxtLink to="/travel/bangkok" class="btn btn-secondary">
         🇹🇭 曼谷旅遊規劃
       </NuxtLink>
     </div>

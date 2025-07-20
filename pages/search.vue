@@ -46,7 +46,7 @@
               <span class="suggestion-icon">📚</span>
               知識庫
             </NuxtLink>
-            <NuxtLink to="/bangkok" class="suggestion-link">
+            <NuxtLink to="/travel/bangkok" class="suggestion-link">
               <span class="suggestion-icon">🇹🇭</span>
               曼谷旅遊
             </NuxtLink>
@@ -120,7 +120,7 @@
               <div class="suggestion-card-icon">🇹🇭</div>
               <h3>曼谷旅遊</h3>
               <p>泰國曼谷旅遊完整指南</p>
-              <NuxtLink to="/bangkok" class="suggestion-link">
+              <NuxtLink to="/travel/bangkok" class="suggestion-link">
                 了解更多
               </NuxtLink>
             </div>
@@ -161,7 +161,7 @@ const searchDatabase = [
     id: 'bangkok',
     title: '曼谷旅遊規劃',
     description: '泰國曼谷旅遊完整指南，包含景點介紹、美食文化、預算規劃等',
-    path: '/bangkok',
+    path: '/travel/bangkok',
     icon: '🇹🇭',
     category: '旅遊指南'
   },
@@ -193,7 +193,7 @@ const searchDatabase = [
     id: 'preparation',
     title: '前置準備',
     description: '曼谷旅遊前置準備事項，包含簽證、機票、住宿等',
-    path: '/bangkok#preparation',
+    path: '/travel/bangkok#preparation',
     icon: '📋',
     category: '旅遊準備'
   },
@@ -201,7 +201,7 @@ const searchDatabase = [
     id: 'attractions',
     title: '必訪景點',
     description: '曼谷必訪景點推薦，包含大皇宮、臥佛寺等',
-    path: '/bangkok#attractions',
+    path: '/travel/bangkok#attractions',
     icon: '🗺️',
     category: '旅遊景點'
   },
@@ -209,7 +209,7 @@ const searchDatabase = [
     id: 'food-culture',
     title: '美食文化',
     description: '泰國美食與文化特色，包含經典泰式料理',
-    path: '/bangkok#food',
+    path: '/travel/bangkok#food',
     icon: '🍜',
     category: '美食文化'
   }

@@ -37,7 +37,7 @@
               <div class="page-icon">🇹🇭</div>
               <h3>曼谷旅遊</h3>
               <p>泰國曼谷旅遊規劃完整指南</p>
-              <NuxtLink to="/bangkok" class="page-link">訪問頁面</NuxtLink>
+              <NuxtLink to="/travel/bangkok" class="page-link">訪問頁面</NuxtLink>
             </div>
           </div>
         </div>
