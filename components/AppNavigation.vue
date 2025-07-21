@@ -38,6 +38,12 @@
               </NuxtLink>
             </li>
             <li class="nav-item">
+              <NuxtLink to="/sport" class="nav-link" @click="closeMenu">
+                <span class="nav-icon">🏃‍♀️</span>
+                運動教學
+              </NuxtLink>
+            </li>
+            <li class="nav-item">
               <NuxtLink to="/search" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">🔍</span>
                 搜尋
@@ -47,7 +53,7 @@
         </div>
 
         <!-- 搜尋功能 -->
-        <div class="nav-search">
+        <!-- <div class="nav-search">
           <div class="search-container">
             <input 
               v-model="searchQuery" 
@@ -61,10 +67,10 @@
             <button class="search-btn">
               <span class="search-icon">🔍</span>
             </button>
-          </div>
+          </div> -->
           
           <!-- 搜尋結果 -->
-          <div v-if="showSearchResults && searchResults.length > 0" class="search-results">
+          <!-- <div v-if="showSearchResults && searchResults.length > 0" class="search-results">
             <div 
               v-for="result in searchResults" 
               :key="result.id"
@@ -78,7 +84,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- 移動端選單按鈕 -->
         <button class="mobile-menu-btn" @click="toggleMenu">
@@ -115,6 +121,13 @@ const searchData = [
     description: '記憶系統與學習機制',
     path: '/',
     icon: '📚'
+  },
+  {
+    id: 'sports',
+    title: '運動教學',
+    description: '28種熱門運動完整教學課程',
+    path: '/sport',
+    icon: '🏃‍♀️'
   },
   {
     id: 'bangkok',

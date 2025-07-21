@@ -36,7 +36,7 @@ const breadcrumbData = {
   '/travel': { title: '旅遊指南', icon: '🌍' },
   '/psychology': { title: '心理學', icon: '🧠' },
   '/bangkok': { title: '曼谷旅遊', icon: '🇹🇭' },
-  '/sitemap': { title: '網站地圖', icon: '🗺️' },
+  '/overview': { title: '網站地圖', icon: '🗺️' },
   '/search': { title: '搜尋', icon: '🔍' }
 }
 

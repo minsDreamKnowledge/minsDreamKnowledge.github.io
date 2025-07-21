@@ -50,7 +50,7 @@
               <span class="suggestion-icon">🇹🇭</span>
               曼谷旅遊
             </NuxtLink>
-            <NuxtLink to="/sitemap" class="suggestion-link">
+            <NuxtLink to="/overview" class="suggestion-link">
               <span class="suggestion-icon">🗺️</span>
               網站地圖
             </NuxtLink>
@@ -166,10 +166,10 @@ const searchDatabase = [
     category: '旅遊指南'
   },
   {
-    id: 'sitemap',
+    id: 'overview',
     title: '網站地圖',
     description: '探索我們完整的知識系統結構，了解網站內容組織',
-    path: '/sitemap',
+    path: '/overview',
     icon: '🗺️',
     category: '網站資訊'
   },

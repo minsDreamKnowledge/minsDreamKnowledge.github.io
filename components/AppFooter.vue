@@ -56,7 +56,7 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/sitemap" class="footer-link">
+              <NuxtLink to="/overview" class="footer-link">
                 <span class="link-icon">🗺️</span>
                 網站地圖
               </NuxtLink>
