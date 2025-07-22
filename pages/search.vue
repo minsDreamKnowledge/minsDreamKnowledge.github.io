@@ -145,7 +145,7 @@ const searchDatabase = [
     id: 'home',
     title: '首頁',
     description: '歡迎來到知識系統，提供記憶系統與學習機制的完整知識體系',
-    path: '/library',
+    path: '/',
     icon: '🏠',
     category: '主要頁面'
   },
@@ -153,7 +153,7 @@ const searchDatabase = [
     id: 'knowledge',
     title: '知識庫',
     description: '記憶系統與學習機制的完整知識體系，包含大腦科學、認知研究等內容',
-    path: '/',
+    path: '/memory',
     icon: '📚',
     category: '教育知識'
   },

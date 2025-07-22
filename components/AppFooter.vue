@@ -32,13 +32,13 @@
           <h4 class="footer-subtitle">快速連結</h4>
           <ul class="footer-links">
             <li>
-              <NuxtLink to="/library" class="footer-link">
+              <NuxtLink to="/" class="footer-link">
                 <span class="link-icon">🏠</span>
                 首頁
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/" class="footer-link">
+              <NuxtLink to="/memory" class="footer-link">
                 <span class="link-icon">📚</span>
                 記憶系統
               </NuxtLink>
@@ -69,13 +69,13 @@
           <h4 class="footer-subtitle">內容分類</h4>
           <ul class="footer-links">
             <li>
-              <a href="/#brain-structure" class="footer-link">
+              <a href="/memory#brain-structure" class="footer-link">
                 <span class="link-icon">🧠</span>
                 大腦科學
               </a>
             </li>
             <li>
-              <a href="/#memory-system" class="footer-link">
+              <a href="/memory#memory-system" class="footer-link">
                 <span class="link-icon">💭</span>
                 記憶系統
               </a>

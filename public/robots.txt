@@ -1,6 +1,3 @@
-# Sitemap
-Sitemap: https://minsdreamknowledge.github.io/sitemap_index.xml
-
 User-Agent: *
 Allow: /
 
@@ -14,3 +11,5 @@ Allow: /
 
 User-Agent: Googlebot
 Allow: /
+
+Sitemap: https://minsdreamknowledge.github.io/sitemap_index.xml

@@ -50,7 +50,7 @@
 - `/` (優先級: 1.0, 更新頻率: daily)
 - `/psychology` (優先級: 0.9, 更新頻率: weekly)
 - `/history` (優先級: 0.9, 更新頻率: weekly)
-- `/library` (優先級: 0.9, 更新頻率: weekly)
+- `/memory` (優先級: 0.9, 更新頻率: weekly)
 - `/search` (優先級: 0.7, 更新頻率: weekly)
 - `/sitemap` (優先級: 0.5, 更新頻率: monthly)
 - `/travel/bangkok` (優先級: 0.8, 更新頻率: monthly)

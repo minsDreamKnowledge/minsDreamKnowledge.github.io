@@ -31,8 +31,8 @@ const route = useRoute()
 
 // 麵包屑資料
 const breadcrumbData = {
-  '/library': { title: '知識庫', icon: '🏠' },
-  '/': { title: '首頁', icon: '📚' },
+  '/': { title: '首頁', icon: '🏠' },
+  '/memory': { title: '知識庫', icon: '📚' },
   '/travel': { title: '旅遊指南', icon: '🌍' },
   '/psychology': { title: '心理學', icon: '🧠' },
   '/bangkok': { title: '曼谷旅遊', icon: '🇹🇭' },

@@ -1,5 +1,3 @@
-import { prerender } from "process";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -17,10 +15,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     sitemapName: 'sitemap_index.xml',
-    xsl: false,
-    defaults: {
-      lastmod: new Date()
-    }
+    xsl: false
   },
   
   app: {
@@ -63,7 +58,21 @@ export default defineNuxtConfig({
   },
   ssr: true,
   routeRules: {
-    '/': { prerender: true },
+    '/': { sitemap: { changefreq: 'daily', priority: 1, lastmod: '2025-01-21' } },
+    '/memory': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.9, lastmod: '2025-01-20' } },
+    '/psychology': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-19' } },
+    '/travel': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-18' } },
+    '/travel/bangkok': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.85, lastmod: '2025-01-17' } },
+    '/sport': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-16' } },
+    '/experiment': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-15' } },
+    '/experiment/ainsworth-strange-situation': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-21' } },
+    '/experiment/piaget-cognitive-development': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-20' } },
+    '/experiment/zimbardo-prison': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-19' } },
+    '/experiment/skinner-box': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-18' } },
+    '/experiment/latane-bystander-effect': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-17' } },
+    '/experiment/asch-conformity': { prerender: true, sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-16' } },
+    '/overview': { prerender: true, sitemap: { changefreq: 'monthly', priority: 0.6, lastmod: '2025-01-14' } },
+    '/search': { prerender: true, sitemap: { changefreq: 'monthly', priority: 0.5, lastmod: '2025-01-13' } },
     '/sitemap_index.xml': { prerender: true }
   }
 })
