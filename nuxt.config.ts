@@ -16,11 +16,10 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge'
   },
   sitemap: {
+    sitemapName: 'sitemap_index.xml',
     xsl: false,
     defaults: {
-      lastmod: new Date().toISOString(),
-      priority: 0.5,
-      changefreq: 'weekly'
+      lastmod: new Date()
     }
   },
   
@@ -65,6 +64,6 @@ export default defineNuxtConfig({
   ssr: true,
   routeRules: {
     '/': { prerender: true },
-    '/sitemap.xml': { prerender: true }
+    '/sitemap_index.xml': { prerender: true }
   }
 })
