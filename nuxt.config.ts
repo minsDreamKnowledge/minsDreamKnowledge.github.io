@@ -14,10 +14,7 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge'
   },
   sitemap: {
-    xsl: false,
-    defaults: {
-      lastmod: new Date()
-    }
+    xsl: false
   },
   
   app: {
