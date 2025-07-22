@@ -1,3 +1,5 @@
+import { prerender } from "process";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -14,7 +16,12 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge'
   },
   sitemap: {
-    xsl: false
+    xsl: false,
+    defaults: {
+      lastmod: new Date().toISOString(),
+      priority: 0.5,
+      changefreq: 'weekly'
+    }
   },
   
   app: {
@@ -55,10 +62,9 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: '/_nuxt/'
   },
-  // ssr: false,
-  nitro: {
-    prerender: {
-      routes: ['/', '/sitemap.xml']
-    }
+  ssr: true,
+  routeRules: {
+    '/': { prerender: true },
+    '/sitemap.xml': { prerender: true }
   }
 })
