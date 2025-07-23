@@ -26,19 +26,12 @@ async function testDomainUpdate() {
   
   // 備份原始文件
   const sitemapPath = path.join(publicDir, 'sitemap.xml');
-  const robotsPath = path.join(publicDir, 'robots.txt');
   
   const sitemapBackup = path.join(publicDir, 'sitemap.xml.backup');
-  const robotsBackup = path.join(publicDir, 'robots.txt.backup');
   
   if (fs.existsSync(sitemapPath)) {
     fs.copyFileSync(sitemapPath, sitemapBackup);
     console.log('📋 Backed up sitemap.xml');
-  }
-  
-  if (fs.existsSync(robotsPath)) {
-    fs.copyFileSync(robotsPath, robotsBackup);
-    console.log('📋 Backed up robots.txt');
   }
   
   // 執行域名更新
@@ -61,12 +54,6 @@ async function testDomainUpdate() {
     }
   }
   
-  if (fs.existsSync(robotsPath)) {
-    if (updateFile(robotsPath, oldDomain, deploymentURL)) {
-      updatedFiles++;
-    }
-  }
-  
   console.log(`✅ Updated ${updatedFiles} files`);
   
   // 驗證更新結果
@@ -81,15 +68,6 @@ async function testDomainUpdate() {
     }
   }
   
-  if (fs.existsSync(robotsPath)) {
-    const robotsContent = fs.readFileSync(robotsPath, 'utf8');
-    if (robotsContent.includes(deploymentURL)) {
-      console.log('✅ robots.txt contains updated domain');
-    } else {
-      console.log('❌ robots.txt domain update failed');
-    }
-  }
-  
   // 恢復備份
   console.log('\n🔄 Restoring original files...');
   
@@ -97,12 +75,6 @@ async function testDomainUpdate() {
     fs.copyFileSync(sitemapBackup, sitemapPath);
     fs.unlinkSync(sitemapBackup);
     console.log('✅ Restored sitemap.xml');
-  }
-  
-  if (fs.existsSync(robotsBackup)) {
-    fs.copyFileSync(robotsBackup, robotsPath);
-    fs.unlinkSync(robotsBackup);
-    console.log('✅ Restored robots.txt');
   }
   
   console.log('\n🎉 Test completed!');

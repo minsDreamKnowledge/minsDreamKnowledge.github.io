@@ -11,7 +11,6 @@ const __dirname = path.dirname(__filename);
 function checkRequiredFiles() {
   const publicDir = path.join(__dirname, '..', 'public');
   const requiredFiles = [
-    'robots.txt',
     'favicon.ico'
   ];
   

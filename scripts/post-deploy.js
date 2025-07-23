@@ -19,8 +19,7 @@ function checkDeploymentOutput() {
   }
   
   const requiredFiles = [
-    'index.html',
-    'robots.txt'
+    'index.html'
   ];
   
   const missingFiles = [];
@@ -41,31 +40,6 @@ function checkDeploymentOutput() {
   }
   
   return true;
-}
-
-// 驗證 robots.txt 中的域名
-function validateRobotsDomain() {
-  const robotsPath = path.join(__dirname, '..', '.output', 'public', 'robots.txt');
-  
-  if (!fs.existsSync(robotsPath)) {
-    console.log('❌ robots.txt not found in output');
-    return false;
-  }
-  
-  try {
-    const content = fs.readFileSync(robotsPath, 'utf8');
-    
-    // 檢查是否包含 GitHub Pages 格式的 URL
-    if (!content.includes('github.io')) {
-      console.log('⚠️  robots.txt may not contain GitHub Pages URL format');
-    }
-    
-    console.log('✅ robots.txt domain validation passed');
-    return true;
-  } catch (error) {
-    console.log(`❌ Error reading robots.txt: ${error.message}`);
-    return false;
-  }
 }
 
 // 檢查 Nuxt 配置
@@ -107,8 +81,7 @@ function checkFileSizes() {
   console.log('📊 Checking file sizes...');
   
   const files = [
-    { name: 'index.html', maxSize: 100 * 1024 }, // 100KB
-    { name: 'robots.txt', maxSize: 1 * 1024 }    // 1KB
+    { name: 'index.html', maxSize: 100 * 1024 } // 100KB
   ];
   
   let allValid = true;
@@ -137,7 +110,6 @@ function main() {
   
   const checks = [
     checkDeploymentOutput(),
-    validateRobotsDomain(),
     validateNuxtConfig(),
     checkFileSizes()
   ];
