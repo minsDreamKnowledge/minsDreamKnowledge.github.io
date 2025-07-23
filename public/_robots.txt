@@ -1,0 +1,48 @@
+# robots.txt for Mins Dream Knowledge
+# https://minsdreamknowledge.github.io
+
+# 允許所有搜索引擎爬蟲
+User-Agent: *
+Allow: /
+
+# 允許 Google 爬蟲
+User-Agent: Googlebot
+Allow: /
+
+# 允許 Google AdSense 和 Analytics
+User-Agent: Mediapartners-Google
+Allow: /
+
+# 允許 Bing 爬蟲
+User-Agent: Bingbot
+Allow: /
+
+# 允許其他主要搜索引擎
+User-Agent: Slurp
+Allow: /
+
+User-Agent: DuckDuckBot
+Allow: /
+
+# 禁止爬取管理區域（如果有的話）
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# 禁止爬取臨時文件
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /.nuxt/
+Disallow: /node_modules/
+
+# 允許爬取所有頁面
+Allow: /memory/
+Allow: /psychology/
+Allow: /travel/
+Allow: /sport/
+Allow: /experiment/
+Allow: /overview/
+Allow: /search/
+
+# Sitemap 位置
+Sitemap: https://minsdreamknowledge.github.io/sitemap_index.xml
