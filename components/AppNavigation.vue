@@ -34,13 +34,13 @@
             <li class="nav-item">
               <NuxtLink to="/travel" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">🌍</span>
-                旅遊指南
+                旅遊
               </NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink to="/sport" class="nav-link" @click="closeMenu">
                 <span class="nav-icon">🏃‍♀️</span>
-                運動教學
+                運動
               </NuxtLink>
             </li>
             <li class="nav-item">

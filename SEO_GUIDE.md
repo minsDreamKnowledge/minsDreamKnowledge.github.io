@@ -354,7 +354,7 @@ Disallow: /.nuxt/
 Disallow: /node_modules/
 
 # Sitemap 位置
-Sitemap: https://minsdreamknowledge.github.io/sitemap_index.xml
+Sitemap: https://minsdreamknowledge.github.io/sitemap.xml
 
 # 爬取延遲（可選）
 Crawl-delay: 1
@@ -383,7 +383,7 @@ Disallow: /.nuxt/
 Disallow: /node_modules/
 
 # Sitemap 位置
-Sitemap: ${baseUrl}/sitemap_index.xml
+Sitemap: ${baseUrl}/sitemap.xml
 
 Crawl-delay: 1`
   

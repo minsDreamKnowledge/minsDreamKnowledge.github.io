@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge',
   },
   sitemap: {
-    sitemapName: 'sitemap_index.xml',
+    sitemapName: 'sitemap.xml',
     xsl: false,
   },
 
@@ -163,7 +163,7 @@ export default defineNuxtConfig({
       prerender: true,
       sitemap: { changefreq: 'monthly', priority: 0.5, lastmod: '2025-01-13' },
     },
-    '/sitemap_index.xml': { prerender: true },
+    '/sitemap.xml': { prerender: true },
     '/robots.txt': { prerender: true },
   },
 });

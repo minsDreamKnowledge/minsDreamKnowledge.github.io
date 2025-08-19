@@ -45,4 +45,4 @@ Allow: /overview/
 Allow: /search/
 
 # Sitemap 位置
-Sitemap: https://minsdreamknowledge.github.io/sitemap_index.xml
+Sitemap: https://minsdreamknowledge.github.io/sitemap.xml

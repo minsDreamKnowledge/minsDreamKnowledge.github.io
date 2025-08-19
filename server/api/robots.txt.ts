@@ -66,7 +66,7 @@ Allow: /experiment/asch-conformity
 Allow: /travel/bangkok
 
 # Sitemap 位置
-Sitemap: ${baseUrl}/sitemap_index.xml
+Sitemap: ${baseUrl}/sitemap.xml
 `
   
   return robotsContent
