@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge',
   },
   sitemap: {
+    discoverImages: false,
+    discoverVideos: false,
     defaults: {
       lastmod: new Date().toISOString(),
       priority: 0.5,
