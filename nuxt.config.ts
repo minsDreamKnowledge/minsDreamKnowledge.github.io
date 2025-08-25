@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge',
   },
   sitemap: {
+    defaults: {
+      lastmod: new Date().toISOString(),
+      priority: 0.5,
+      changefreq: 'weekly'
+    },
     sitemapName: 'sitemap.xml',
     xsl: false,
   },
@@ -104,65 +109,65 @@ export default defineNuxtConfig({
   },
   ssr: true,
   routeRules: {
-    // '/': {
-    //   sitemap: { changefreq: 'daily', priority: 1, lastmod: '2025-01-21T11:10:44+08:00' },
-    // },
-    // '/memory': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.9, lastmod: '2025-01-20T11:10:44+08:00' },
-    // },
-    // '/psychology': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-19T11:10:44+08:00' },
-    // },
-    // '/travel': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-18T11:10:44+08:00' },
-    // },
-    // '/travel/bangkok': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.85, lastmod: '2025-01-17T11:10:44+08:00' },
-    // },
-    // '/sport': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-16T11:10:44+08:00' },
-    // },
-    // '/experiment': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-15T11:10:44+08:00' },
-    // },
-    // '/experiment/ainsworth-strange-situation': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-21T11:10:44+08:00' },
-    // },
-    // '/experiment/piaget-cognitive-development': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-20T11:10:44+08:00' },
-    // },
-    // '/experiment/zimbardo-prison': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-19T11:10:44+08:00' },
-    // },
-    // '/experiment/skinner-box': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-18T11:10:44+08:00' },
-    // },
-    // '/experiment/latane-bystander-effect': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-17T11:10:44+08:00' },
-    // },
-    // '/experiment/asch-conformity': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-16T11:10:44+08:00' },
-    // },
-    // '/overview': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'monthly', priority: 0.6, lastmod: '2025-01-14T11:10:44+08:00' },
-    // },
-    // '/search': {
-    //   prerender: true,
-    //   sitemap: { changefreq: 'monthly', priority: 0.5, lastmod: '2025-01-13T11:10:44+08:00' },
-    // },
+    '/': {
+      sitemap: { changefreq: 'daily', priority: 1, lastmod: '2025-01-21T11:10:44+08:00' },
+    },
+    '/memory': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.9, lastmod: '2025-01-20T11:10:44+08:00' },
+    },
+    '/psychology': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-19T11:10:44+08:00' },
+    },
+    '/travel': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-18T11:10:44+08:00' },
+    },
+    '/travel/bangkok': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.85, lastmod: '2025-01-17T11:10:44+08:00' },
+    },
+    '/sport': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-16T11:10:44+08:00' },
+    },
+    '/experiment': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.8, lastmod: '2025-01-15T11:10:44+08:00' },
+    },
+    '/experiment/ainsworth-strange-situation': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-21T11:10:44+08:00' },
+    },
+    '/experiment/piaget-cognitive-development': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-20T11:10:44+08:00' },
+    },
+    '/experiment/zimbardo-prison': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-19T11:10:44+08:00' },
+    },
+    '/experiment/skinner-box': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-18T11:10:44+08:00' },
+    },
+    '/experiment/latane-bystander-effect': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-17T11:10:44+08:00' },
+    },
+    '/experiment/asch-conformity': {
+      prerender: true,
+      sitemap: { changefreq: 'weekly', priority: 0.7, lastmod: '2025-02-16T11:10:44+08:00' },
+    },
+    '/overview': {
+      prerender: true,
+      sitemap: { changefreq: 'monthly', priority: 0.6, lastmod: '2025-01-14T11:10:44+08:00' },
+    },
+    '/search': {
+      prerender: true,
+      sitemap: { changefreq: 'monthly', priority: 0.5, lastmod: '2025-01-13T11:10:44+08:00' },
+    },
     '/sitemap.xml': { prerender: true },
     '/robots.txt': { prerender: true },
   },
