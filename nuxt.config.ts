@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     discoverVideos: false,
     defaults: {
       lastmod: new Date().toISOString(),
-      priority: 0.5,
       changefreq: 'weekly'
     },
     sitemapName: 'sitemap.xml',
