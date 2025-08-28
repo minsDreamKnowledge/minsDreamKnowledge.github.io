@@ -18,8 +18,10 @@
     "@nuxtjs/seo": "^3.1.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "aos": "^2.3.4",
-    "nuxt": "^3.17.6",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "nuxt": "^4.0.3"
   }
 }

@@ -14,13 +14,12 @@ export default defineNuxtConfig({
   },
   sitemap: {
     hostname: 'https://minsdreamknowledge.github.io',
-    xmlNs: "http://www.sitemaps.org/schemas/sitemap/0.9",
+    xmlNs: 'http://www.sitemaps.org/schemas/sitemap/0.9',
     trailingSlash: false,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
-      lastmod: new Date().toISOString(),
-      changefreq: 'weekly'
+      changefreq: 'always',
     },
     sitemapName: 'sitemap.xml',
     xsl: false,
@@ -116,8 +115,8 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github-pages',
     routeRules: {
-      '/**': { redirect: false } // 避免某些 fallback rewrite
-    }
+      '/**': { redirect: false }, // 避免某些 fallback rewrite
+    },
   },
   routeRules: {
     '/': {
@@ -181,5 +180,10 @@ export default defineNuxtConfig({
     },
     '/sitemap.xml': { prerender: true },
     '/robots.txt': { prerender: true },
+  },
+  vite: {
+    server: {
+      watch: { usePolling: true, interval: 300 },
+    },
   },
 });
