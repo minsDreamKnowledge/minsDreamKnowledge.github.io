@@ -121,7 +121,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': {
-      sitemap: { changefreq: 'daily', lastmod: '2025-01-21' },
+      sitemap: { changefreq: 'always', lastmod: '2025-08-28' },
     },
     '/memory': {
       prerender: true,
