@@ -114,11 +114,6 @@ export default defineNuxtConfig({
       '/**': { redirect: false } // 避免某些 fallback rewrite
     }
   },
-  router: {
-    options: {
-      strict: true, // 強制區分 `/about` 和 `/about/`
-    }
-  },
   routeRules: {
     '/': {
       sitemap: { changefreq: 'daily', lastmod: '2025-01-21' },
