@@ -14,12 +14,13 @@ export default defineNuxtConfig({
   },
   sitemap: {
     hostname: 'https://minsdreamknowledge.github.io',
-    xmlNs: 'http://www.sitemaps.org/schemas/sitemap/0.9',
+    xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
     trailingSlash: false,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
       changefreq: 'always',
+      lastmod: new Date().toISOString(),
     },
     sitemapName: 'sitemap.xml',
     xsl: false,
