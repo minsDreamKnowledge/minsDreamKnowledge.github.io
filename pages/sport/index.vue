@@ -105,7 +105,7 @@
                   12堂課程
                 </span>
               </div>
-              <button class="btn btn-outline">
+              <button class="btn btn-outline" @click="navigateTo(sport.link)">
                 <i class="fas fa-arrow-right"></i>
                 開始學習
               </button>
@@ -399,7 +399,8 @@ const sports = ref([
     description: '學習滑板技巧、花式動作等',
     icon: 'fas fa-skating',
     category: '極限運動',
-    intro: '滑板是一項充滿挑戰與創意的極限運動，結合了技巧、平衡與藝術表現'
+    intro: '滑板是一項充滿挑戰與創意的極限運動，結合了技巧、平衡與藝術表現',
+    link: 'sport/skateboarding'
   },
   {
     id: 'bmx',
