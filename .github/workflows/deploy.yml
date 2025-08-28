@@ -42,7 +42,10 @@ jobs:
       run: npm run pre-deploy
       
     - name: Build application
-      run: npm run build:static
+      run: npx nuxt build --preset github_pages
+
+    - name: Ensure .nojekyll exists
+      run: touch ./.output/public/.nojekyll
       
     - name: Setup Pages
       uses: actions/configure-pages@v4
