@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge',
   },
   sitemap: {
+    xmlNs: "http://www.sitemaps.org/schemas/sitemap/0.9",
+    trailingSlash: true,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
