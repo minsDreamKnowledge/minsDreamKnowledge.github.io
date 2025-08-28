@@ -69,7 +69,7 @@
           <h4 class="footer-subtitle">內容分類</h4>
           <ul class="footer-links">
             <li>
-              <a href="/memory#brain-structure" class="footer-link">
+              <a href="/memory#brain-basis" class="footer-link">
                 <span class="link-icon">🧠</span>
                 大腦科學
               </a>

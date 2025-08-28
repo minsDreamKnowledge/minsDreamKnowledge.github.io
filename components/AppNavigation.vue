@@ -140,7 +140,7 @@ const searchData = [
     id: 'brain-structure',
     title: '大腦基礎結構',
     description: '大腦基礎結構與功能',
-    path: '/memory#brain-structure',
+    path: '/memory#brain-basis',
     icon: '🧠'
   },
   {

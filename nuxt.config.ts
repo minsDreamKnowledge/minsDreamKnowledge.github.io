@@ -114,6 +114,7 @@ export default defineNuxtConfig({
   },
   ssr: true,
   nitro: {
+    preset: 'github-pages',
     routeRules: {
       '/**': { redirect: false } // 避免某些 fallback rewrite
     }
