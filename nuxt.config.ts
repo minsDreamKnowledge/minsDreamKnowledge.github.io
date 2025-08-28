@@ -118,6 +118,7 @@ export default defineNuxtConfig({
     routeRules: {
       '/**': { redirect: false }, // 避免某些 fallback rewrite
     },
+    prerender: { crawlLinks: true, routes: ['/sitemap.xml'], failOnError: false }
   },
   routeRules: {
     '/': {
