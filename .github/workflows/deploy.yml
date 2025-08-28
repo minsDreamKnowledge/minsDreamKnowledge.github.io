@@ -42,7 +42,7 @@ jobs:
       run: npm run pre-deploy
       
     - name: Build application
-      run: npx nuxt build --preset github_pages
+      run: npx nuxt generate --preset github_pages
 
     - name: Ensure .nojekyll exists
       run: touch ./.output/public/.nojekyll
