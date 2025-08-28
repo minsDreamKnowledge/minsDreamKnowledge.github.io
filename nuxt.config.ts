@@ -109,6 +109,11 @@ export default defineNuxtConfig({
     buildAssetsDir: '/_nuxt/',
   },
   ssr: true,
+  nitro: {
+    routeRules: {
+      '/**': { redirect: false } // 避免某些 fallback rewrite
+    }
+  },
   router: {
     options: {
       strict: true, // 強制區分 `/about` 和 `/about/`
