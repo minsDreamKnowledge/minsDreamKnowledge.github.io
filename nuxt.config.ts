@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     },
     sitemapName: 'sitemap.xml',
     xsl: false,
+    gzip: true,
   },
 
   app: {
