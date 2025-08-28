@@ -178,8 +178,6 @@ export default defineNuxtConfig({
       prerender: true,
       sitemap: { changefreq: 'monthly', lastmod: '2025-01-13' },
     },
-    '/sitemap.xml': { prerender: true },
-    '/robots.txt': { prerender: true },
   },
   vite: {
     server: {
