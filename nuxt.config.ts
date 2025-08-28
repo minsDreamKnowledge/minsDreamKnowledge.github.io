@@ -13,8 +13,9 @@ export default defineNuxtConfig({
     name: 'Mins Dream Knowledge',
   },
   sitemap: {
+    hostname: 'https://minsdreamknowledge.github.io',
     xmlNs: "http://www.sitemaps.org/schemas/sitemap/0.9",
-    trailingSlash: true,
+    trailingSlash: false,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
