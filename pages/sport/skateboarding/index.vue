@@ -257,6 +257,10 @@
             <i class="fas fa-users"></i>
             查看完整滑板手介紹
           </button>
+          <button class="btn btn-primary" @click="navigateToSkatersList">
+            <i class="fas fa-search"></i>
+            瀏覽滑板手社群
+          </button>
         </div>
       </div>
     </section>
@@ -381,6 +385,11 @@ const navigateToVenues = () => {
 const navigateToSkaters = () => {
   // 導航到滑板手介紹頁面
   console.log('導航到滑板手介紹頁面')
+}
+
+const navigateToSkatersList = () => {
+  // 導航到滑板手社群頁面
+  navigateTo('/sport/skateboarding/skaters')
 }
 
 const navigateToNews = () => {
@@ -662,6 +671,10 @@ onMounted(() => {
 .skaters-cta {
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* 新聞區塊樣式 */

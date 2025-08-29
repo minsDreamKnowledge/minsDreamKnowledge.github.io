@@ -4,8 +4,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
 
-  // 添加 sitemap 和 seo 模組
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/seo'],
+  // 添加 sitemap、seo 和 pinia 模組
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/seo', '@pinia/nuxt'],
+  
+  // Pinia 配置
+  pinia: {
+    autoImports: ['defineStore', 'storeToRefs']
+  },
 
   // Sitemap 配置
   site: {
@@ -179,11 +184,6 @@ export default defineNuxtConfig({
     '/search': {
       prerender: true,
       sitemap: { changefreq: 'monthly', lastmod: '2025-01-13' },
-    },
-  },
-  vite: {
-    server: {
-      watch: { usePolling: true, interval: 300 },
     },
   },
 });
