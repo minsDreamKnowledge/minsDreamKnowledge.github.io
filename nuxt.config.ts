@@ -145,7 +145,7 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: '/_nuxt/',
   },
-  ssr: true,
+  ssr: false,
   nitro: {
     preset: 'github-pages',
     routeRules: {
