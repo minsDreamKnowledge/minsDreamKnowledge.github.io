@@ -30,6 +30,10 @@ export default defineNuxtConfig({
     sitemapName: 'sitemap.xml',
     xsl: false,
     gzip: true,
+    // 確保 sitemap 在根路徑可訪問
+    sources: [
+      '/api/sitemap.xml'
+    ]
   },
 
   app: {
@@ -121,9 +125,15 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'github-pages',
     routeRules: {
-      '/**': { redirect: false }, // 避免某些 fallback rewrite
+      // 移除全域重定向禁用，改為更精確的配置
+      '/api/**': { headers: { 'cache-control': 's-maxage=60' } },
+      '/_nuxt/**': { headers: { 'cache-control': 's-maxage=31536000' } }
     },
-    prerender: { crawlLinks: true, routes: ['/sitemap.xml'], failOnError: false }
+    prerender: { 
+      crawlLinks: true, 
+      routes: ['/sitemap.xml', '/robots.txt'], 
+      failOnError: false 
+    }
   },
   routeRules: {
     '/': {
