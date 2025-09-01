@@ -213,7 +213,7 @@
 import { ref, onMounted } from 'vue'
 import { useAuth } from '~/composables/useAuth'
 import { useContent } from '~/composables/useContent'
-import { useAppStore } from '~/stores'
+import { useAppStore } from '~/stores/app'
 
 // 使用組合式函數
 const auth = useAuth()

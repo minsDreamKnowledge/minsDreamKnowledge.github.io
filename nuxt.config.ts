@@ -12,6 +12,30 @@ export default defineNuxtConfig({
     autoImports: ['defineStore', 'storeToRefs']
   },
 
+  // Vite 配置
+  vite: {
+    define: {
+      global: 'globalThis',
+    },
+    optimizeDeps: {
+      include: ['pinia-plugin-persistedstate'],
+      force: true
+    },
+    server: {
+      fs: {
+        strict: false
+      }
+    },
+    resolve: {
+      alias: {
+        crypto: 'crypto-browserify'
+      }
+    },
+    esbuild: {
+      target: 'node14'
+    }
+  },
+
   // Sitemap 配置
   site: {
     url: 'https://minsdreamknowledge.github.io',

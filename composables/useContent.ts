@@ -1,5 +1,6 @@
-import { useContentStore, useAppStore } from '~/stores'
-import type { ContentItem, ContentFilter } from '~/stores'
+import { useContentStore } from '~/stores/content'
+import { useAppStore } from '~/stores/app'
+import type { ContentItem, ContentFilter } from '~/stores/content'
 
 export const useContent = () => {
   const contentStore = useContentStore()

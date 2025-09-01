@@ -152,7 +152,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useUserStore, useAppStore, useContentStore } from '~/stores'
+import { useUserStore } from '~/stores/user'
+import { useAppStore } from '~/stores/app'
+import { useContentStore } from '~/stores/content'
 
 // 使用 store
 const userStore = useUserStore()

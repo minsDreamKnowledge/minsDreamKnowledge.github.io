@@ -1,4 +1,5 @@
-import { useUserStore, useAppStore } from '~/stores'
+import { useUserStore } from '~/stores/user'
+import { useAppStore } from '~/stores/app'
 
 export const useAuth = () => {
   const userStore = useUserStore()
