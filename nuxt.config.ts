@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     discoverVideos: false,
     defaults: {
       changefreq: 'always',
-      lastmod: new Date().toISOString(),
+      lastmod: new Date().toISOString().split('T')[0],
     },
     sitemapName: 'sitemap.xml',
     xsl: false,
