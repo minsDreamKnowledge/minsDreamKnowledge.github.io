@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   sitemap: {
     hostname: 'https://minsdreamknowledge.github.io',
     xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    trailingSlash: false,
+    trailingSlash: true,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
@@ -163,59 +163,59 @@ export default defineNuxtConfig({
     '/': {
       sitemap: { changefreq: 'always', lastmod: '2025-08-28' },
     },
-    '/memory': {
+    '/memory/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-20' },
     },
-    '/psychology': {
+    '/psychology/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-19' },
     },
-    '/travel': {
+    '/travel/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-18' },
     },
-    '/travel/bangkok': {
+    '/travel/bangkok/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-17' },
     },
-    '/sport': {
+    '/sport/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-16' },
     },
-    '/experiment': {
+    '/experiment/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-01-15' },
     },
-    '/experiment/ainsworth-strange-situation': {
+    '/experiment/ainsworth-strange-situation/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-21' },
     },
-    '/experiment/piaget-cognitive-development': {
+    '/experiment/piaget-cognitive-development/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-20' },
     },
-    '/experiment/zimbardo-prison': {
+    '/experiment/zimbardo-prison/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-19' },
     },
-    '/experiment/skinner-box': {
+    '/experiment/skinner-box/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-18' },
     },
-    '/experiment/latane-bystander-effect': {
+    '/experiment/latane-bystander-effect/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-17' },
     },
-    '/experiment/asch-conformity': {
+    '/experiment/asch-conformity/': {
       prerender: true,
       sitemap: { changefreq: 'weekly', lastmod: '2025-02-16' },
     },
-    '/overview': {
+    '/overview/': {
       prerender: true,
       sitemap: { changefreq: 'monthly', lastmod: '2025-01-14' },
     },
-    '/search': {
+    '/search/': {
       prerender: true,
       sitemap: { changefreq: 'monthly', lastmod: '2025-01-13' },
     },
