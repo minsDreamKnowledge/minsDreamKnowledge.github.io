@@ -40,24 +40,21 @@ export default defineNuxtConfig({
   site: {
     url: 'https://minsdreamknowledge.github.io',
     name: 'Mins Dream Knowledge',
+    trailingSlash: true,
   },
   sitemap: {
+    autoLastmod: true,
     hostname: 'https://minsdreamknowledge.github.io',
     xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
-    trailingSlash: true,
+    trailingSlash: false,
     discoverImages: false,
     discoverVideos: false,
     defaults: {
       changefreq: 'always',
-      lastmod: new Date().toISOString().split('T')[0],
     },
     sitemapName: 'sitemap.xml',
     xsl: false,
-    gzip: true,
-    // 確保 sitemap 在根路徑可訪問
-    sources: [
-      '/api/sitemap.xml'
-    ]
+    gzip: true
   },
 
   app: {
@@ -145,7 +142,7 @@ export default defineNuxtConfig({
     baseURL: '/',
     buildAssetsDir: '/_nuxt/',
   },
-  ssr: false,
+  ssr: true,
   nitro: {
     preset: 'github-pages',
     routeRules: {
